@@ -1,0 +1,28 @@
+@use 'header';
+@use 'variaveis';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background-color: variaveis.$bgColorprimary;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @media(min-width: 992px) and (max-width: 1200px){
+        max-width: 970px;
+    }
+}
+
+li{
+    list-style: none;
+}

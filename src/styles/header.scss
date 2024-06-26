@@ -11,13 +11,36 @@
     color: variaveis.$hoverColorPrimary;
 
     &__container{
+        max-width: 1170px;
         margin: 0 auto;
+        padding: 0 15px;
         height: 80px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         box-sizing: border-box;
 
+        @media(min-width: 992px) and (max-width: 1200px){
+            max-width: 970px;
+        }
+
+        @media(max-width: 991px){
+            max-width: 750px;
+            height: 54px;
+        }
+    }
+
+    .header__home{
+        color: #fff;
+        text-decoration: none;
+
+        &__logo{
+            width: 132px;
+
+            @media(max-width: 991px){
+                width: 89px;
+            }
+        }
     }
 
     &__nav{
@@ -31,6 +54,7 @@
             align-items: center;
 
             &__link{
+                position: relative;
                 display: flex;
                 font-size: 16px;
                 line-height: inherit;
@@ -57,6 +81,47 @@
 
                         &:hover{
                             color: variaveis.$hoverColorPrimary;
+                        }
+                    }
+                }
+
+                .header__mp{
+                    display: block;
+                    position: absolute;
+                    top: 100%;
+
+                    &__plans{
+                        display: block;
+                        width: 350px;
+                        box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
+                        transform: translateZ(-10px);
+                        
+                        &__plan{
+                            background-color: variaveis.$bgColorMenuPlans;
+
+                            &:hover{
+                                background-color: #000;
+                            }
+
+                            .plan__link{
+                                display: flex;
+                                flex-direction: column;
+                                padding: 30px;
+                                color: #fff;
+                                text-decoration: none;
+
+                                .title{
+                                    margin: 4px 0;
+                                    font-size: 18px;
+                                    font-weight: 700;
+                                    text-transform: capitalize;
+                                }
+
+                                .content{
+                                    font-size: 12px;
+                                    color: #ccc;
+                                }
+                            }
                         }
                     }
                 }
@@ -139,6 +204,52 @@
     }
 }
 
-img{
-    width: 132px;
+
+
+.header__menu__mobile{
+    display: none;
+
+    @media(max-width: 992px){
+        display: flex;
+    }
+
+    .hm__link__profile{
+        margin: auto 6px auto 10px;
+        color: #fff;
+        text-decoration: none;
+
+        i{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 34px;
+            height: 34px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+        }
+    }
+
+    .hm__drop{
+        display: block;
+        padding: 0 0 1px 9px;
+        background-color: initial;
+        border: none;
+        outline: none;
+        z-index: 101;
+        color: #fff;
+
+        &__icon{
+            display: block;
+            height: 3px;
+            width: 22px;
+            background-color: currentColor;
+            border-radius: 2px;
+            
+            &:nth-child(2), 
+            &:nth-child(3){
+                margin-top: 4px;
+            }
+            
+        }
+    }
 }

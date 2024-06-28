@@ -86,9 +86,13 @@
                 }
 
                 .header__mp{
-                    display: block;
-                    position: absolute;
-                    top: 100%;
+                    display: none;
+
+                    &--open{
+                        display: block;
+                        position: absolute;
+                        top: 100%;
+                    }
 
                     &__plans{
                         display: block;

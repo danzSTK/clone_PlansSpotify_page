@@ -207,11 +207,14 @@
                 }
 
                 .menu__profile{
-                    position: absolute;
+                    display: none;
+                    &--open{
+                        position: absolute;
                     display: block;
                     top: 100%;
                     right: -17px;
                     margin-top: -8px;
+                    }
 
                     &::before{
                         content: "";
@@ -255,6 +258,10 @@
 
                                 &.subtitulo{
                                     color: #919496;
+
+                                    &:hover{
+                                        color: variaveis.$hoverColorPrimary;
+                                    }
                                 }
                             }
                         }
@@ -265,6 +272,13 @@
     }
 }
 
+
+.profile__angle{
+    
+    &--open{
+        transform: rotate(180deg);
+    }
+}
 
 
 .header__menu__mobile{

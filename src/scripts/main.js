@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const menuMobile = document.querySelector('.mb__menu')
     const itensMenuMobile = document.querySelectorAll('.mb__menu__link')
     const menuLogo = document.querySelector('.mb__menu__home')
+    const body = document.querySelector('body')
 
     buttonDropPlans.addEventListener('mouseenter', function(){
         menuPlans.classList.add('header__mp--open')
@@ -67,8 +68,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
         if(menuMobile.classList.contains('mb__menu--open')){
             menuMobile.classList.remove('mb__menu--open')
+            body.classList.remove('scroll--none')
         }else{
             menuMobile.classList.add('mb__menu--open')
+            body.classList.add('scroll--none')
         }
 
         if(!menuLogo.classList.contains('mb__menu__home--open')){

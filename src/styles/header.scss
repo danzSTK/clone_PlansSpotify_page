@@ -381,6 +381,7 @@
         overflow-x: hidden;
         overflow-y: scroll;
         z-index: 100;
+        
         &--open{
             display: flex;
             opacity: 0;

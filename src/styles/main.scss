@@ -26,3 +26,13 @@ body{
 li{
     list-style: none;
 }
+
+.background-primary{
+    overflow: auto;
+    background-color: variaveis.$bgColorprimary;
+}
+
+.scroll--none{
+    overflow: hidden;
+
+}

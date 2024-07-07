@@ -89,11 +89,12 @@
 
                 .header__mp{
                     display: none;
-
+                    
                     &--open{
                         display: block;
                         position: absolute;
                         top: 100%;
+                        z-index: 100;
                     }
 
                     &__plans{
@@ -210,10 +211,11 @@
                     display: none;
                     &--open{
                         position: absolute;
-                    display: block;
-                    top: 100%;
-                    right: -17px;
-                    margin-top: -8px;
+                        display: block;
+                        top: 100%;
+                        right: -17px;
+                        margin-top: -8px;
+                        z-index: 101;
                     }
 
                     &::before{

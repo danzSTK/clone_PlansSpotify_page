@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
     const buttonDropPlans = document.getElementById('drop-plans');
-    const menuPlans = document.querySelector('#menu_plans');
+    const menuPlans = document.getElementById('menu_plans');
     const buttonDropMenuProfile = document.getElementById('drop-menu-profile')
     const menuProfile = document.querySelector('#menu-profile');
     const iconeAnimateProfile = document.querySelector('#icone-profile-animate')
@@ -16,14 +16,14 @@ document.addEventListener('DOMContentLoaded', function(){
         menuPlans.classList.add('header__mp--open')
     })
     
+    
     buttonDropPlans.addEventListener('mouseleave', function(){
         menuPlans.classList.remove('header__mp--open')
     })
-
+    
     menuPlans.addEventListener('mouseenter', function(){
         menuPlans.classList.add('header__mp--open')
     })
-
     menuPlans.addEventListener('mouseleave', function(){
         menuPlans.classList.remove('header__mp--open')
     })
@@ -81,7 +81,3 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     }
 })
-
-function teste(){
-    
-}

@@ -77,4 +77,22 @@ document.addEventListener('DOMContentLoaded', function(){
             console.log(false)
         }
     }
+
+    const buttonsDropCard = document.querySelectorAll('.card-aside__button-drop');
+
+    buttonsDropCard.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const card = event.target.closest('.card')
+            const icone = button.querySelector('i')
+
+
+            if (card.classList.contains('open')) {
+                card.classList.remove('open')
+                icone.classList.replace('fa-angle-up', 'fa-angle-down')
+                return
+            }
+            card.classList.add('open')
+            icone.classList.replace('fa-angle-down', 'fa-angle-up')
+        })
+    })
 })

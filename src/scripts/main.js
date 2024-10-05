@@ -47,8 +47,6 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     function dropMenuMobile(){
-        
-        
         for( icone of closeIcone){
             if(icone.classList.contains('hm__drop__icon--open')){
                 icone.classList.remove('hm__drop__icon--open')
@@ -58,18 +56,17 @@ document.addEventListener('DOMContentLoaded', function(){
         }
         
         for(links of itensMenuMobile){
-            
-            if(links.classList.contains('mb__menu__link--open')){
+            if (links.classList.contains('mb__menu__link--open')) {
                 links.classList.remove('mb__menu__link--open')
-            }else if(!links.classList.contains('mb__menu__link--open')){
+            } else if (!links.classList.contains('mb__menu__link--open')) {
                 links.classList.add('mb__menu__link--open')
             }
         }
 
-        if(menuMobile.classList.contains('mb__menu--open')){
+        if (menuMobile.classList.contains('mb__menu--open')) {
             menuMobile.classList.remove('mb__menu--open')
             body.classList.remove('scroll--none')
-        }else{
+        } else {
             menuMobile.classList.add('mb__menu--open')
             body.classList.add('scroll--none')
         }

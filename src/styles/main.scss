@@ -3,6 +3,7 @@
 @use 'hero'; 
 @use 'benefits';
 @use 'benefits-card';
+@use 'plans-info';
 
 *{
     margin: 0;
@@ -22,6 +23,15 @@ body{
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
+
+    @media (max-width: 1200px) {
+        max-width: 680px;
+    }
+
+    @media (max-width: 560px) {
+        display: block;
+        max-width: 100%;
+    }
 }
 
 li{
@@ -35,4 +45,34 @@ li{
 
 .scroll--none{
     overflow: hidden;
+}
+
+.title-m {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    word-spacing: -10px;
+    max-width: 70%;
+
+    @media (max-width: 1200px) {
+        max-width: 100%;
+        font-size: 32px;
+        word-spacing: -5px;
+    }
+
+    @media (max-width: 768px) {
+        max-width: 100%;
+        font-weight: 700;
+        line-height: 32px;
+        font-size: 28px;
+        word-spacing: -4px;
+    }
+}
+
+.subtitle-m {
+    font-size: 16px; 
+    font-weight: 400;
+    text-align: center;
+    margin: 16px auto 32px;
 }

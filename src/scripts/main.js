@@ -1,15 +1,21 @@
 document.addEventListener('DOMContentLoaded', function(){
     const buttonDropPlans = document.getElementById('drop-plans');
     const menuPlans = document.getElementById('menu_plans');
+
     const buttonDropMenuProfile = document.getElementById('drop-menu-profile')
     const menuProfile = document.querySelector('#menu-profile');
     const iconeAnimateProfile = document.querySelector('#icone-profile-animate')
+
     const buttonDropMenuMobile = document.getElementById('drop-menu-mobile')
     const closeIcone = document.querySelectorAll('.hm__drop__icon')
     const backgroundMenuMobile = document.querySelector('.hm__background ')
     const menuMobile = document.querySelector('.mb__menu')
     const itensMenuMobile = document.querySelectorAll('.mb__menu__link')
     const menuLogo = document.querySelector('.mb__menu__home')
+    
+    const buttonOthersPayments = document.getElementById('drop-payments-type')
+    const cardOthersPayments = document.getElementById('drop-others-payments')
+
     const body = document.querySelector('body')
 
     buttonDropPlans.addEventListener('mouseenter', function(){
@@ -78,13 +84,12 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     }
 
-    const buttonsDropCard = document.querySelectorAll('.card-aside__button-drop');
+    const buttonsDropCard = document.querySelectorAll('.card-aside__button-drop')
 
     buttonsDropCard.forEach(button => {
         button.addEventListener('click', (event) => {
             const card = event.target.closest('.card')
             const icone = button.querySelector('i')
-
 
             if (card.classList.contains('open')) {
                 card.classList.remove('open')
@@ -94,5 +99,20 @@ document.addEventListener('DOMContentLoaded', function(){
             card.classList.add('open')
             icone.classList.replace('fa-angle-down', 'fa-angle-up')
         })
+    })
+
+    // --> function drops others cards in hover <--
+    let isClick = false
+    buttonOthersPayments.addEventListener('mouseenter', () => {
+        if (!isClick) cardOthersPayments.style.display = 'grid'
+    })
+    buttonOthersPayments.addEventListener('mouseleave', () => {
+        if (!isClick) cardOthersPayments.style.display = 'none'
+    })
+
+    buttonOthersPayments.addEventListener('click', () => {
+        isClick = !isClick
+        cardOthersPayments.style.display = 'grid'
+        console.log(isClick)
     })
 })

@@ -1,34 +1,50 @@
 @use 'variaveis';
 
 .benefits-cards {
-    &__title {
-        text-align: center;
-        font-size: 32px;
-        font-weight: 700;
-        word-spacing: -5px;
-    }
-
-    &__subtitle {
-        font-size: 16px; 
-        font-weight: 400;
-        text-align: center;
-        margin: 16px auto 32px;
-    }
-
+    margin-block: 0;
+    padding-bottom: 30px;
     .card-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
         gap: 30px;
+
+        @media (max-width: 1200px){
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
         .card {
+            &#ads {
+                background-image: url('../../src/images/card/card-one.png')
+            }
+
+            &#card-jam {
+                background-image: url('../../src/images/card/card-2.png')
+            }
+
+            &#card-streaming {
+                background-image: url('../../src/images/card/card-3.png')
+            }
+
+            &#card-maquina {
+                background-image: url('../../src/images/card/card-4.png')
+            }
+
+            &#card-download {
+                background-image: url('../../src/images/card/card-5.png')
+            }
             overflow: hidden;
             position: relative;
             display: flex;
             flex-wrap: nowrap;
-            column-gap: 24px;
             width: 100%;
             padding: 24px;
             max-height: 226px;
-            max-width: 380px;
+            max-width: 360px;
+            gap: 30px;
             background-image: url('../../src/images/card/card-one.png');
             background-color: variaveis.$bgColorMenuPlans;
             background-position: 0 -30px;
@@ -50,7 +66,7 @@
                     transform: translateY(0) !important;
                 }
             }
-
+            
             &-content {
                 flex-shrink: 3;
                 overflow: hidden;
@@ -58,7 +74,7 @@
                     display: flex;
                     align-items: end;
                     justify-content: flex-start;
-                    height: 178px;
+                    height: 178px;   
                     
                     .card-info {
                         display: flex;
@@ -69,12 +85,29 @@
                         transform: translateY(100%);
                         opacity: 0;
                         transition: .25s ease-in;
+                        
+                        &.card-ads::before {
+                            content: url('../../src/images/card/svg/ads_autofalante.svg');
+                        }
 
+                        &.card-jam::before {
+                            content: url('../../src/images/card/svg/jam.svg');
+                        }
+
+
+                        &.card-streaming::before {
+                            content: url('../../src/images/card/svg/play-alt.svg');
+                        }
+
+                        &.card-maquina::before {
+                            content: url('../../src/images/card/svg/graphic.svg');
+                        }
+                        
                         &::before {
+                            content: url('../../src/images/card/svg/download.svg');
                             display: inline-block;
                             padding-right: 4px;
                             vertical-align: middle;
-                            content: url('../../src/images/card/ads_autofalante.svg');
                         }
                     }
 
@@ -82,6 +115,7 @@
                         font-size: 24px;
                         line-height: 1.2em;
                         font-weight: 800;
+                        word-spacing: -4px;
                     }
                 }
 
@@ -110,6 +144,7 @@
                         border: 1px solid #fff;
                         border-radius: 9999px;
                         padding: 7px 31px;
+                        cursor: pointer;
                     }
                 }
             }
@@ -127,6 +162,11 @@
                     background-color: variaveis.$hoverColorPrimary;
                     position: relative;
                     top: calc(100% - 48px);
+
+                    @media (max-width: 768px) {
+                        width: 34px;
+                        height: 34px;
+                    }
                 }
             }
         }

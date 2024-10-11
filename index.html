@@ -180,18 +180,18 @@
     </section>
     <section class="benefits-cards">
         <div class="container">
-            <h2 class="benefits-cards__title">
+            <h2 class="title-m">
                 Aproveite ao máximo sua experiência do Premium
             </h2>
-            <h3 class="benefits-cards__subtitle">
+            <h3 class="subtitle-m">
                 Personalise o jeito que você ouve música com nossos recursos mais adorados do Premium
             </h3>
             <div class="card-container">
-                <div class="card">
+                <div id="card-ads" class="card">
                     <div class="card-content">
                         <div class="card-header">
                             <div>
-                                <span class="card-info">Ouça músicas sem anúncios</span>
+                                <span class="card-info card-ads">Ouça músicas sem anúncios</span>
                                 <h4 class="card-title">Curta músicas sem anúncios</h4>
                             </div>
                         </div>
@@ -208,17 +208,17 @@
                         </button>
                     </aside>
                 </div>
-                <div class="card">
+                <div id="card-jam" class="card">
                     <div class="card-content">
                         <div class="card-header">
                             <div>
-                                <span class="card-info">Ouça músicas sem anúncios</span>
-                                <h4 class="card-title">Curta músicas sem anúncios</h4>
+                                <span class="card-info card-jam">Jam</span>
+                                <h4 class="card-title">Comece uma Jam com a galera</h4>
                             </div>
                         </div>
                         <div class="card-actionBar">
                             <p class="card-description">
-                                Descubra novas músicas e escute o que quiser sem anúncios. ksjdklas skl;jdklas ksajdklajs ksjdkljaslk l;sjlka
+                                Convide a galera pra ouvir e adicionar músicas à fila em tempo real, de qualquer lugar.
                             </p>
                             <a href="#" class="card-link">Experimente Premium</a>
                         </div>
@@ -229,17 +229,17 @@
                         </button>
                     </aside>
                 </div>
-                <div class="card">
+                <div id="card-streaming" class="card">
                     <div class="card-content">
                         <div class="card-header">
                             <div>
-                                <span class="card-info">Ouça músicas sem anúncios</span>
-                                <h4 class="card-title">Curta músicas sem anúncios</h4>
+                                <span class="card-info card-streaming">Controle o streaming</span>
+                                <h4 class="card-title">Domine o jeito que você escuta</h4>
                             </div>
                         </div>
                         <div class="card-actionBar">
                             <p class="card-description">
-                                Descubra novas músicas e escute o que quiser sem anúncios.
+                                Ligue e desligue a ordem aleatória. Ouça suas músicas favoritas no repeat. Organise sua fila
                             </p>
                             <a href="#" class="card-link">Experimente Premium</a>
                         </div>
@@ -250,17 +250,17 @@
                         </button>
                     </aside>
                 </div>
-                <div class="card">
+                <div id="card-maquina" class="card">
                     <div class="card-content">
                         <div class="card-header">
                             <div>
-                                <span class="card-info">Ouça músicas sem anúncios</span>
-                                <h4 class="card-title">Curta músicas sem anúncios</h4>
+                                <span class="card-info card-maquina">Sua Máquina do Tempo</span>
+                                <h4 class="card-title">Descubra qual é seu nível de fã</h4>
                             </div>
                         </div>
                         <div class="card-actionBar">
                             <p class="card-description">
-                                Descubra novas músicas e escute o que quiser sem anúncios.
+                                Saiba tudo sobre seus hábitos de streaming com Sua Máquina do Tempo.
                             </p>
                             <a href="#" class="card-link">Experimente Premium</a>
                         </div>
@@ -271,17 +271,17 @@
                         </button>
                     </aside>
                 </div>
-                <div class="card">
+                <div id="card-download" class="card open">
                     <div class="card-content">
                         <div class="card-header">
                             <div>
-                                <span class="card-info">Ouça músicas sem anúncios</span>
-                                <h4 class="card-title">Curta músicas sem anúncios</h4>
+                                <span class="card-info card-download">Downloads</span>
+                                <h4 class="card-title">Ouça de qualquer lugar, sem internet</h4>
                             </div>
                         </div>
                         <div class="card-actionBar">
                             <p class="card-description">
-                                Descubra novas músicas e escute o que quiser sem anúncios.
+                                Agora você pode baixar seus podcasts, playlists, músicas e audiolivros favoritos.
                             </p>
                             <a href="#" class="card-link">Experimente Premium</a>
                         </div>
@@ -295,7 +295,77 @@
             </div>
         </div>
     </section>
-    <section class="benefits">
+
+    <section class="plans-infos">
+        <div class="container">
+            <h2 class="title-m">Planos Acessíveis para qualquer situação</h2>
+            <h3 class="subtitle-m">Escolha um plano Premium e ouça música sem anúncios de forma ilimitada no seu celular, alto-falante e em outros dispositivos. Vários métodos de pagamento. Cancele quando quiser.
+            </h3>
+            <ul class="payments-type">
+                <li class="payments-type__item">
+                    <div class="payments-type__item__image" aria-label="visa"></div>
+                </li>
+                <li class="payments-type__item">
+                    <div class="payments-type__item__image" aria-label="mastercard"></div>
+                </li>
+                <li class="payments-type__item">
+                    <div class="payments-type__item__image" aria-label="american-express"></div>
+                </li>
+                <li class="payments-type__item">
+                    <div class="payments-type__item__image" aria-label="diners"></div>
+                </li>
+            </ul>
+            <div class="other-payments">
+                <span class="other-payments__title">
+                    <span id="drop-payments-type">e +13 outros</span>
+                </span>
+                <ul id="drop-others-payments" class="other-payments__drop">
+                    <li class="other-payments__drop__item">
+                        <div class="other-payments__drop__item__image" aria-label="hipercard"></div>
+                    </li>
+                    <li class="other-payments__drop__item">
+                        <div class="other-payments__drop__item__image" aria-label="elo"></div>
+                    </li>
+                    <li class="other-payments__drop__item">
+                        <div class="other-payments__drop__item__image" aria-label="itau"></div>
+                    </li>
+                    <li class="other-payments__drop__item">
+                        <div class="other-payments__drop__item__image" aria-label="santander"></div>
+                    </li>
+                    <li class="other-payments__drop__item">
+                        <div class="other-payments__drop__item__image" aria-label="bradesco"></div>
+                    </li>
+                    <li class="other-payments__drop__item">
+                        <div class="other-payments__drop__item__image" aria-label="banco-br"></div>
+                    </li>
+                    <li class="other-payments__drop__item">
+                        <div class="other-payments__drop__item__image" aria-label="caixa"></div>
+                    </li>
+                    <li class="other-payments__drop__item">
+                        <div class="other-payments__drop__item__image" aria-label="nubank"></div>
+                    </li>
+                    <li class="other-payments__drop__item">
+                        <div class="other-payments__drop__item__image" aria-label="inter"></div>
+                    </li>
+                    <li class="other-payments__drop__item">
+                        <div class="other-payments__drop__item__image" aria-label="original-bank"></div>
+                    </li>
+                    <li class="other-payments__drop__item">
+                        <div class="other-payments__drop__item__image" aria-label="next-bank"></div>
+                    </li>
+                    <li class="other-payments__drop__item">
+                        <div class="other-payments__drop__item__image" aria-label="credi-bank"></div>
+                    </li>
+                    <li class="other-payments__drop__item">
+                        <div class="other-payments__drop__item__image" aria-label="pix"></div>
+                    </li>
+                </ul>
+            </div>
+            <article></article>
+            <article></article>
+        </div>
+    </section>
+<!-- <section class="benefits">
         <div class="benefits__container">
             <header class="benefits__header">
                 <h2 class="benefits__header__title">Experimente a diferença</h2>
@@ -437,7 +507,7 @@
             </table>
         </div>
         
-    </section>
+    </section>-->
     <script src="src/scripts/main.js"></script>
 </body>
 </html>

@@ -364,7 +364,7 @@
     }
 
     .mb__menu{
-        display: none;
+        display: none !important;
         position: fixed;
         top: 0;
         right: -50%;
@@ -385,7 +385,7 @@
         z-index: 100;
         
         &--open{
-            display: flex;
+            display: flex !important;
             opacity: 0;
             right: -100%;
             animation: pushMenu .4s ease-out forwards;

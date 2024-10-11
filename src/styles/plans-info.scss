@@ -1,4 +1,5 @@
 .plans-infos{
+    overflow-wrap: break-word;
     .payments-type{
         display: flex;
         justify-content: center;
@@ -108,6 +109,38 @@
                     }
                     &[aria-label = "pix"] {
                         background-image: url('../../src/images/payments/other-payments/pix.svg');
+                    }
+                }
+            }
+        }
+    }
+    .premium-features{
+        display: flex;
+        align-items: center;
+        padding: 0 32px;
+        margin: 48px auto;
+
+        h2 {
+            font-size: 32px;
+            word-spacing: -4px;
+        }
+
+        .features {
+            font-size: 16px;
+            line-height: 1.5rem;
+            font-weight: 400;
+            color: #fff;
+
+            &__item {
+                
+                &__title {
+                    position: relative;
+                    margin-left: 20px;
+
+                    &::before {
+                        content: "✓";
+                        position: absolute;
+                        left: -24px;
                     }
                 }
             }

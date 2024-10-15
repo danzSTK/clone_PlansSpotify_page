@@ -22,6 +22,11 @@
             letter-spacing: -0.015em;
             line-height: 46px;
             font-weight: 700;
+
+            @media (max-width: 500px){
+                font-size: 28px;
+                line-height: 34px;
+            }
         }
 
         &__subtitle{
@@ -30,10 +35,17 @@
             line-height: 30px;
             font-size: 24px;
             font-weight: 400;
+
+
+            @media (max-width: 500px) {
+                font-size: 18px;
+                line-height: 24px;
+            }
         }
     }
 
     &__table{
+        overflow: hidden;
         table-layout: fixed;
         border-spacing: 0;
         width: 100%;
@@ -41,6 +53,10 @@
         margin: 0 auto;
         overflow-wrap: break-word;
         background-color: variaveis.$bgColorprimary;
+
+        @media (max-width: 500px) {
+            table-layout: auto;
+        }
 
         .benefits__thl__title{
             font-size: 16px;
@@ -101,6 +117,15 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        opacity: 0;
+                        scale: 1.0;
+                        transition: .2s ease-in-out;
+                        transition-property: scale opacity;
+                        
+                        &.active {
+                            animation: tableIcone 1s forwards;
+                        }
+
                         i{
                             background-color: #fff;
                             width: 32px;
@@ -121,9 +146,25 @@
                         text-decoration-style: dashed;
                         text-decoration-thickness: 1px;
                         text-underline-offset: 4px;
+
+                        @media (max-width: 500px) {
+                            font-size: 14px;
+                        }
                     }
                 }
             }
         }
+    }
+}
+
+@keyframes tableIcone {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1.0;
     }
 }

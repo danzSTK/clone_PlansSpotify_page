@@ -4,7 +4,10 @@
 @use 'benefits';
 @use 'benefits-card';
 @use 'plans-info';
-
+@use 'footer';
+html {
+    scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
@@ -52,7 +55,7 @@ li{
     text-align: center;
     font-size: 40px;
     font-weight: 800;
-    word-spacing: -10px;
+    word-spacing: -7px;
     max-width: 70%;
 
     @media (max-width: 1200px) {
@@ -76,4 +79,5 @@ li{
     text-align: center;
     margin: 16px auto 32px;
     max-width: 671px;
+    line-height: 1.5rem;
 }

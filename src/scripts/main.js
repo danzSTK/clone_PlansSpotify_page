@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', function(){
+    // --> itens drop in drop menu plans in header for desktops<--
     const buttonDropPlans = document.getElementById('drop-plans');
     const menuPlans = document.getElementById('menu_plans');
 
+    // --> itens drop in drop menu Profile  <--
     const buttonDropMenuProfile = document.getElementById('drop-menu-profile')
     const menuProfile = document.querySelector('#menu-profile');
     const iconeAnimateProfile = document.querySelector('#icone-profile-animate')
-
+    
+    // --> itens drop in drop menu Mobile <--
     const buttonDropMenuMobile = document.getElementById('drop-menu-mobile')
     const closeIcone = document.querySelectorAll('.hm__drop__icon')
     const backgroundMenuMobile = document.querySelector('.hm__background ')
@@ -13,9 +16,25 @@ document.addEventListener('DOMContentLoaded', function(){
     const itensMenuMobile = document.querySelectorAll('.mb__menu__link')
     const menuLogo = document.querySelector('.mb__menu__home')
     
+    // --> itens drops others cards in hover <--
     const buttonOthersPayments = document.getElementById('drop-payments-type')
     const cardOthersPayments = document.getElementById('drop-others-payments')
 
+    // --> itens drop card in section benefits card <--
+    const buttonsDropCard = document.querySelectorAll('.card-aside__button-drop')
+
+    // --> itens of animations icone in benefits table <--
+    const iconeSectionTable = document.querySelectorAll('.icone--check')
+    const sectionTable = document.getElementById('table-benefits')
+    const sectionTablePosition = sectionTable.getBoundingClientRect().top
+    const screanHeight = window.innerHeight
+
+    console.log(sectionTablePosition)
+    console.log(screanHeight)
+    console.log(sectionTable.offsetTop)
+    console.log(scrollY)
+
+    // --> itens dom of
     const body = document.querySelector('body')
 
     buttonDropPlans.addEventListener('mouseenter', function(){
@@ -84,8 +103,7 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     }
 
-    const buttonsDropCard = document.querySelectorAll('.card-aside__button-drop')
-
+    // --> function drop card in section benefits card <--
     buttonsDropCard.forEach(button => {
         button.addEventListener('click', (event) => {
             const card = event.target.closest('.card')
@@ -101,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function(){
         })
     })
 
-    // --> function drops others cards in hover <--
+    // --> function drops others cards in hover e click for mobile <--
     let isClick = false
     buttonOthersPayments.addEventListener('mouseenter', () => {
         if (!isClick) cardOthersPayments.style.display = 'grid'
@@ -114,5 +132,16 @@ document.addEventListener('DOMContentLoaded', function(){
         isClick = !isClick
         cardOthersPayments.style.display = 'grid'
         console.log(isClick)
+    })
+
+    // --> function of animations icone in benefits table <--
+
+    window.addEventListener('scroll', () => {
+        iconeSectionTable.forEach((icone, index) => {
+            icone.style.animationDelay = `${parseFloat(index * 0.2)}s`
+        })
+        if (sectionTablePosition < screanHeight && window.scrollY > sectionTable.offsetTop) {
+            iconeSectionTable.forEach(icone => icone.classList.add('active'))
+        } else iconeSectionTable.forEach(icone => icone.classList.remove('active'))
     })
 })

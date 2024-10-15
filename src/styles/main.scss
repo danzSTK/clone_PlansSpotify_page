@@ -5,6 +5,10 @@
 @use 'benefits-card';
 @use 'plans-info';
 @use 'footer';
+@use 'faQ';
+a {
+    color: #fff;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -80,4 +84,8 @@ li{
     margin: 16px auto 32px;
     max-width: 671px;
     line-height: 1.5rem;
+
+    a {
+        color: #fff;
+    }
 }

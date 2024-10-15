@@ -135,13 +135,21 @@ document.addEventListener('DOMContentLoaded', function(){
     })
 
     // --> function of animations icone in benefits table <--
-
+    
     window.addEventListener('scroll', () => {
-        iconeSectionTable.forEach((icone, index) => {
-            icone.style.animationDelay = `${parseFloat(index * 0.2)}s`
-        })
+
         if (sectionTablePosition < screanHeight && window.scrollY > sectionTable.offsetTop) {
+            iconeSectionTable.forEach((icone, index) => {
+                icone.style.animationDelay = `${parseFloat(index * 0.2)}s`
+            })
+            iconeSectionTable.forEach(icone => icone.classList.remove('off'))
             iconeSectionTable.forEach(icone => icone.classList.add('active'))
-        } else iconeSectionTable.forEach(icone => icone.classList.remove('active'))
+        } else {
+            [...iconeSectionTable].reverse().forEach((icone, index) => {
+                icone.style.animationDelay = `${parseFloat(index * 0.2)}s`
+            })
+            iconeSectionTable.forEach(icone => icone.classList.remove('active'))
+            iconeSectionTable.forEach(icone => icone.classList.add('off'))
+        }
     })
 })

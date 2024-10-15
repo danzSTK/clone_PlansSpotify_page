@@ -117,13 +117,17 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        opacity: 0;
-                        scale: 1.0;
                         transition: .2s ease-in-out;
                         transition-property: scale opacity;
-                        
                         &.active {
+                            opacity: 0;
+                            scale: 0;
                             animation: tableIcone 1s forwards;
+                        }
+
+                        &.off {
+
+                            animation: tableIconeClose 1s forwards;
                         }
 
                         i{
@@ -154,6 +158,18 @@
                 }
             }
         }
+    }
+}
+
+@keyframes tableIconeClose {
+    from {
+        opacity: 2;
+        scale: 1;
+    }
+
+    to {
+        opacity: 0;
+        scale: 0;
     }
 }
 

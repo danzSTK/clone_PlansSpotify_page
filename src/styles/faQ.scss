@@ -1,0 +1,68 @@
+@use 'variaveis';
+.faQ {
+    padding-bottom: 64px;
+
+    &__subtitle-m {
+        margin-bottom: 0 !important;
+    }
+    &__cards {
+        list-style: none;
+
+        &__card{
+            border-bottom: 1px solid rgba(255, 255, 255, .15);
+
+            &:hover {
+                background-color:variaveis.$bgColorMenuPlans;
+            }
+
+            &__details {
+                color: #fff;
+                max-height: 120px;
+                overflow: hidden;
+
+                &[open] {
+                    transition: max-height 1s linear;
+                    background-color: #1f1f1f;
+                    max-height: 800px;
+
+                    & > .faQ__cards__card__details__summary {
+                        background-color: variaveis.$bgColorMenuPlans;
+                        .faQ__cards__card__details__summary__title {
+                            text-decoration: underline;
+                        }
+
+                        i {
+                            transform: scale3d(1, 1, 1);
+                        }
+                    }
+                }
+
+                &__summary {
+                    font-weight: bold;
+                    font-size: 18px;
+                    list-style: none;
+                    cursor: pointer;
+                    padding: 16px;
+                    margin-top: 2px;
+
+                    &__title {
+                        display: inline-block;
+                        vertical-align: middle;
+                        padding-right: 10px;
+                        width: calc(100% - 26px);
+                    }
+
+                    i {
+                        vertical-align: middle;
+                        font-size: 24px;
+                        transform: scale3d(-1, -1, -1);
+                    }
+                }
+
+                &__description {
+                    padding: 15px 32px 32px;
+                }
+            }
+        }
+    }
+}

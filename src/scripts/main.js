@@ -23,17 +23,6 @@ document.addEventListener('DOMContentLoaded', function(){
     // --> itens drop card in section benefits card <--
     const buttonsDropCard = document.querySelectorAll('.card-aside__button-drop')
 
-    // --> itens of animations icone in benefits table <--
-    const iconeSectionTable = document.querySelectorAll('.icone--check')
-    const sectionTable = document.getElementById('table-benefits')
-    const sectionTablePosition = sectionTable.getBoundingClientRect().top
-    const screanHeight = window.innerHeight
-
-    console.log(sectionTablePosition)
-    console.log(screanHeight)
-    console.log(sectionTable.offsetTop)
-    console.log(scrollY)
-
     // --> itens dom of
     const body = document.querySelector('body')
 
@@ -135,8 +124,14 @@ document.addEventListener('DOMContentLoaded', function(){
     })
 
     // --> function of animations icone in benefits table <--
-    
-    window.addEventListener('scroll', () => {
+    function animateIconeTable() {
+         // --> itens of animations icone in benefits table <--
+        const iconeSectionTable = document.querySelectorAll('.icone--check')
+        const sectionTable = document.getElementById('table-benefits')
+        const sectionTablePosition = sectionTable.getBoundingClientRect().top
+        const screanHeight = window.innerHeight
+
+        console.log()
 
         if (sectionTablePosition < screanHeight && window.scrollY > sectionTable.offsetTop) {
             iconeSectionTable.forEach((icone, index) => {
@@ -151,5 +146,6 @@ document.addEventListener('DOMContentLoaded', function(){
             iconeSectionTable.forEach(icone => icone.classList.remove('active'))
             iconeSectionTable.forEach(icone => icone.classList.add('off'))
         }
-    })
+    }
+    window.addEventListener('scroll', animateIconeTable)
 })

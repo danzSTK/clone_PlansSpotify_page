@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function(){
     // --> itens drop in drop menu Mobile <--
     const buttonDropMenuMobile = document.getElementById('drop-menu-mobile')
     const closeIcone = document.querySelectorAll('.hm__drop__icon')
-    const backgroundMenuMobile = document.querySelector('.hm__background ')
     const menuMobile = document.querySelector('.mb__menu')
     const itensMenuMobile = document.querySelectorAll('.mb__menu__link')
     const menuLogo = document.querySelector('.mb__menu__home')
@@ -23,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function(){
     // --> itens drop card in section benefits card <--
     const buttonsDropCard = document.querySelectorAll('.card-aside__button-drop')
 
-    // --> itens dom of
+    // --> itens dom <--
     const body = document.querySelector('body')
 
     buttonDropPlans.addEventListener('mouseenter', function(){
@@ -131,21 +130,21 @@ document.addEventListener('DOMContentLoaded', function(){
         const sectionTablePosition = sectionTable.getBoundingClientRect().top
         const screanHeight = window.innerHeight
 
-        console.log()
-
         if (sectionTablePosition < screanHeight && window.scrollY > sectionTable.offsetTop) {
             iconeSectionTable.forEach((icone, index) => {
                 icone.style.animationDelay = `${parseFloat(index * 0.2)}s`
             })
-            iconeSectionTable.forEach(icone => icone.classList.remove('off'))
+            //iconeSectionTable.forEach(icone => icone.classList.remove('off'))
             iconeSectionTable.forEach(icone => icone.classList.add('active'))
         } else {
-            [...iconeSectionTable].reverse().forEach((icone, index) => {
+          /*   [...iconeSectionTable].reverse().forEach((icone, index) => {
                 icone.style.animationDelay = `${parseFloat(index * 0.2)}s`
             })
+            iconeSectionTable.forEach(icone => icone.classList.add('off')) */
             iconeSectionTable.forEach(icone => icone.classList.remove('active'))
-            iconeSectionTable.forEach(icone => icone.classList.add('off'))
         }
     }
     window.addEventListener('scroll', animateIconeTable)
 })
+
+

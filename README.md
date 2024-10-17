@@ -46,7 +46,7 @@ Após a instalação das dependências, você já pode visualizar o projeto em s
 Para realizar qualquer modificação no projeto e atualizar o build, execute o seguinte comando:
 
 ```bash
-    $ npm run build
+    $ npm run start
 ```
 
 Com esse comando, qualquer alteração feita no projeto será automaticamente detectada e refletida no build.

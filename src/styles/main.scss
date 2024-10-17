@@ -6,13 +6,16 @@
 @use 'plans-info';
 @use 'footer';
 @use 'faQ';
+
 a {
     color: #fff;
 }
+
 html {
     scroll-behavior: smooth;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -26,7 +29,7 @@ body{
     overflow-x: hidden;
 }
 
-.container{
+.container {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;

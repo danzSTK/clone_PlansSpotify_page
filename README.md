@@ -1,4 +1,4 @@
-<header>
+<header style="border-radius: 16px;">
     <img src="./src/images/md/banner spotify clone.png" style="border-radius: 16px; margin-bottom: 8px"/>
 </header>
 

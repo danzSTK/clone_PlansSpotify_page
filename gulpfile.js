@@ -12,7 +12,6 @@ function styles(){
 }
 
 
-exports.default = styles();
-exports.watch = function(){
-    gulp.watch('./src/styles/*.scss', {ignoreInitial: false},gulp.series(styles))
+exports.default = function(){
+    gulp.watch('./src/styles/*.scss', {ignoreInitial: false}, gulp.series(styles))
 }
